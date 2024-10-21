@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras</title>
+    <link rel="stylesheet" href="../static/css/output.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Meow+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@heroicons/vue@v2"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Defina a data do evento (exemplo: 26 de Janeiro de 2025)
+            const eventDate = new Date("2025-01-26T00:00:00");
+            const clockElement = document.getElementById("day-clock");
+
+            function updateClock() {
+                const today = new Date();
+                const difference = eventDate - today;
+                const daysRemaining = Math.floor(difference / (1000 * 60 * 60 * 24)); // Converte o tempo restante em dias
+
+                if (daysRemaining > 1) {
+                    clockElement.textContent = `Faltam ${daysRemaining} dias`;
+                } else if (daysRemaining === 1) {
+                    clockElement.textContent = "É amanhã!";
+                } else {
+                    clockElement.textContent = "O grande dia chegou!";
+                }
+            }
+
+            // Atualiza o relógio imediatamente ao carregar a página
+            updateClock();
+
+            // Atualiza o relógio a cada dia (24 horas)
+            setInterval(updateClock, 1000 * 60 * 60 * 24);
+        });
+    </script>
+    <style>
+        menu.open{
+            right: 0;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col bg-zinc-800">
+    <header class="flex justify-between pb-0 p-4 items-center">
+        <p class="text-2xl font-meow text-white">J&S</p>
+        <div class="text-center">
+            <p id="day-clock" class="text-sm font-poppins text-white"></p>
+        </div>
+        <div id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" class="size-8">
+                <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+            </svg>              
+        </div>
+    </header>
+    <main class="px-4 flex-grow pb-20">
+        <menu id="side-menu" class="fixed top-0 right-[-250px] w-2/3 h-screen bg-slate-500 px-4 py-2" style="transition: right 0.3s ease; z-index: 1; box-shadow: -20px 0 5px rgba(0, 0, 0, 0.5);">
+            <div class="flex justify-end">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-8" id="close-menu">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>                                  
+            </div>
+            <nav class="px-1">
+                <ul>
+                    <li class="my-8">
+                        <a href="../index.html" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                            </svg>
+                            <span class="text-white mx-2 text-lg font-poppins">Início</span>
+                        </a>
+                    </li>
+                    <li class="my-8">
+                        <a href="cerimonia.html" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                                <path d="m15 1.784-.796.795a1.125 1.125 0 1 0 1.591 0L15 1.784ZM12 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L12 1.784ZM9 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L9 1.784ZM9.75 7.547c.498-.021.998-.035 1.5-.042V6.75a.75.75 0 0 1 1.5 0v.755c.502.007 1.002.021 1.5.042V6.75a.75.75 0 0 1 1.5 0v.88l.307.022c1.55.117 2.693 1.427 2.693 2.946v1.018a62.182 62.182 0 0 0-13.5 0v-1.018c0-1.519 1.143-2.829 2.693-2.946l.307-.022v-.88a.75.75 0 0 1 1.5 0v.797ZM12 12.75c-2.472 0-4.9.184-7.274.54-1.454.217-2.476 1.482-2.476 2.916v.384a4.104 4.104 0 0 1 2.585.364 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 2.585-.364v-.384c0-1.434-1.022-2.7-2.476-2.917A49.138 49.138 0 0 0 12 12.75ZM21.75 18.131a2.604 2.604 0 0 0-1.915.165 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.604 2.604 0 0 0-1.915-.165v2.494c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875v-2.494Z" />
+                            </svg>                              
+                            <span class="text-white mx-2 text-lg font-poppins">Cerimônia</span>
+                        </a>
+                    </li>
+                    <li class="my-8">
+                        <a href="festa.html" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                                <path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z" clip-rule="evenodd" />
+                            </svg>                                                           
+                            <span class="text-white mx-2 text-lg font-poppins">Festa</span>
+                        </a>
+                    </li>
+                    <li class="my-8">
+                        <a href="regras.html" class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                                <path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clip-rule="evenodd" />
+                                <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 0 1-3 0V6.75Z" />
+                            </svg>                                                                                       
+                            <span class="text-white mx-2 text-lg font-poppins">Regras</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </menu>
+        <div id="cerimony-details" class="my-12">
+            <p id="name" class="text-6xl text-center font-imperial text-white">Regras</p>  
+        </div>
+
+        <div class="text-white">
+            <h2 class="font-libre">Para garantir que todos aproveitem o momento da melhor forma, pedimos gentilmente que respeitem as seguintes orientações:</h2>
+            <br>
+        </div>
+
+        <ul class="text-white">
+            <li class="font-poppins text-sm">
+                <strong>- Dresscode: </strong> Pedimos às damas que optem por trajes sem decotes muito profundos, especialmente considerando que o clima no local costuma ser frio. Aos cavalheiros, sugerimos que evitem o uso de chinelos e regatas, para mantermos o ambiente alinhado à ocasião.
+            </li>
+            <br>
+            <li class="font-poppins text-xs">
+                - <span class="font-poppins font-bold bg-red-500 p-1">IMPORTANTE:</span> Moças, NÃO USAR BRANCO.
+            </li>
+            <br>
+            <li class="font-poppins text-sm">
+                - Convidado não convida! Em último caso,  por favor, entre em contato diretamente com os noivos. Infelizmente, quem não estiver na lista não poderá ser admitido no evento.
+            </li>
+            <br>
+        </ul>
+    </main>
+    <nav class="z-1 border border-t-black border-x-black rounded-t-3xl fixed bottom-0 left-0 w-full p-4 flex justify-around items-baseline bg-slate-100" style="z-index: 2;">
+        <a href="https://noivos.casar.com/samuely#/presentes" class="text-center flex flex-col">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 w-full" id="presentear">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+            </svg>
+        </a>
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-9">
+                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+            </svg>              
+        </a>
+        <a href="https://noivos.casar.com/samuely#/rsvp" class="text-center flex flex-col">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 w-full" id="presenca">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+        </a>
+    </nav>  
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuBtn.addEventListener('click', () => {
+            sideMenu.classList.toggle('open'); // Alterna o menu aberto e fechado
+        });
+    </script>
+    <script>
+        const closeMenuBtn = document.getElementById('close-menu');
+        
+        closeMenuBtn.addEventListener('click', () => {
+            sideMenu.classList.remove('open');
+        })
+    </script>
+</body>
+</html>
