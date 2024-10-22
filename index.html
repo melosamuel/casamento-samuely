@@ -44,7 +44,7 @@
         }
     </style>
 </head>
-<body class="h-screen flex flex-col bg-zinc-800">
+<body class="h-screen flex flex-col bg-zinc-800 lg:px-12">
     <header class="flex flex-col pb-0 p-4 items-center">
         <p class="text-2xl font-meow text-white self-start sm:text-4xl lg:self-center xl:text-6xl">J&S</p>
         <div class="text-center lg:hidden">
@@ -55,8 +55,8 @@
                 <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
             </svg>              
         </div>
-        <nav class="hidden lg:inline-block bg-slate-500 rounded-3xl mt-12">
-            <ul class="flex">
+        <nav class="hidden lg:inline-block bg-slate-500 rounded-3xl mt-12 lg:w-full">
+            <ul class="flex lg:w-full lg:justify-around">
                 <li class="m-6 xl:mx-12">
                     <a href="index.html" class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6 xl:size-8">
@@ -76,7 +76,7 @@
                     </a>
                 </li>
                 <li class="m-6 xl:mx-12">   
-                    <a href="https://noivos.casar.com/samuely#/rsvp" class="flex items-center">
+                    <a href="https://noivos.casar.com/samuely#/rsvp" class="flex items-center" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6 xl:size-8" id="presenca">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
@@ -84,7 +84,7 @@
                     </a>
                 </li>
                 <li class="m-6 xl:mx-12">
-                    <a href="https://noivos.casar.com/samuely#/presentes" class="flex items-center">
+                    <a href="https://noivos.casar.com/samuely#/presentes" class="flex items-center" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6 xl:size-8" id="presentear">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
                         </svg>
@@ -110,7 +110,7 @@
             </ul>
         </nav>
     </header>
-    <main class="px-4 flex-grow py-8 xl:px-12">
+    <main class="px-4 flex-grow py-8 lg:px-24  xl:px-12">
         <menu id="side-menu" class="fixed top-0 right-[-250px] w-2/3 h-screen bg-slate-500 px-4 py-2 sm:right-[-600px] sm:w-2/4 hidden" style="transition: right 0.3s ease; z-index: 1; box-shadow: -20px 0 5px rgba(0, 0, 0, 0.5);">
             <div class="flex justify-end" id="close-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-9 sm:size-10">
@@ -138,7 +138,7 @@
                         </a>
                     </li>
                     <li class="my-8">   
-                        <a href="https://noivos.casar.com/samuely#/rsvp" class="flex items-center">
+                        <a href="https://noivos.casar.com/samuely#/rsvp" class="flex items-center" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6" id="presenca">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
@@ -146,7 +146,7 @@
                         </a>
                     </li>
                     <li class="my-8">
-                        <a href="https://noivos.casar.com/samuely#/presentes" class="flex items-center">
+                        <a href="https://noivos.casar.com/samuely#/presentes" class="flex items-center" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6" id="presentear">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
                             </svg>
@@ -218,20 +218,20 @@
             <div class="text-white lg:w-3/5 xl:mt-12">
                 <h2 class="font-libre sm:text-center sm:text-2xl">A <span class="ml-2">HISTÓRIA DO CASAL</span></h2>
                 <br>
-                <p class="font-poppins text-sm xl:text-md">Era janeiro de 2022, e dois destinos estavam prestes a se cruzar sem que eles soubessem o impacto que causariam na vida um do outro. A cunhada de Jardielly, cheia de intenções, sugeriu a Samuel que convidasse Jardielly para um encontro e, embora nenhum dos dois soubesse naquele momento, algo muito especial estava prestes a nascer.</p>
+                <p class="font-poppins text-sm lg:text-lg">Era janeiro de 2022, e dois destinos estavam prestes a se cruzar sem que eles soubessem o impacto que causariam na vida um do outro. A cunhada de Jardielly, cheia de intenções, sugeriu a Samuel que convidasse Jardielly para um encontro e, embora nenhum dos dois soubesse naquele momento, algo muito especial estava prestes a nascer.</p>
                 <br>
-                <p class="font-poppins text-sm xl:text-md">O primeiro encontro foi repleto de sorrisos e conversas que fluiram naturalmente entre eles, passando por assuntos do cotidiano, dúvidas sobre a vida e até planos para o futuro. Não houve aquela sensação mágica de familiaridade imediata, mas havia algo especial na forma como eles compartilhavam suas ideias e metas. Aos poucos, encontros se tornaram rotinas, e a presença um do outro passou de agradável a indispensável. O que começou como curiosidade, logo se transformou em uma afeição profunda.</p>
+                <p class="font-poppins text-sm lg:text-lg">O primeiro encontro foi repleto de sorrisos e conversas que fluiram naturalmente entre eles, passando por assuntos do cotidiano, dúvidas sobre a vida e até planos para o futuro. Não houve aquela sensação mágica de familiaridade imediata, mas havia algo especial na forma como eles compartilhavam suas ideias e metas. Aos poucos, encontros se tornaram rotinas, e a presença um do outro passou de agradável a indispensável. O que começou como curiosidade, logo se transformou em uma afeição profunda.</p>
                 <br>
-                <p class="font-poppins text-sm xl:text-md">Pouco tempo depois, Samuel recebeu a notícia de que iria ingressar na carreira militar. Um passo importante, mas que trazia suas dificuldades. Ele teve que raspar o cabelo, abraçando uma nova fase em sua vida. Porém, nem isso abalou Jardielly, que, firme ao seu lado, mostrava que o amor deles era resistente, mesmo nas adversidades – como o cabelo raspado que virou uma piada entre os dois. Cada desafio e evento tornava o vínculo mais forte.</p>
+                <p class="font-poppins text-sm lg:text-lg">Pouco tempo depois, Samuel recebeu a notícia de que iria ingressar na carreira militar. Um passo importante, mas que trazia suas dificuldades. Ele teve que raspar o cabelo, abraçando uma nova fase em sua vida. Porém, nem isso abalou Jardielly, que, firme ao seu lado, mostrava que o amor deles era resistente, mesmo nas adversidades – como o cabelo raspado que virou uma piada entre os dois. Cada desafio e evento tornava o vínculo mais forte.</p>
                 <br>
-                <p class="font-poppins text-sm xl:text-md">Enquanto Samuel estava no internato, Jardielly tomou uma decisão importante em sua vida espiritual: ela se batizou na Congregação de Carius. Samuel ficou imensamente feliz com a notícia, entendendo que esse era um passo significativo para ela em sua caminhada com Deus. O batismo foi um marco importante na vida dela, e mesmo distantes, o apoio mútuo entre eles continuava forte.</p>
+                <p class="font-poppins text-sm lg:text-lg">Enquanto Samuel estava no internato, Jardielly tomou uma decisão importante em sua vida espiritual: ela se batizou na Congregação de Carius. Samuel ficou imensamente feliz com a notícia, entendendo que esse era um passo significativo para ela em sua caminhada com Deus. O batismo foi um marco importante na vida dela, e mesmo distantes, o apoio mútuo entre eles continuava forte.</p>
                 <br> 
             </div>
         </div>
         <div id="second-layout" class="hidden lg:block text-white">
-            <p class="font-poppins text-sm xl:text-md">O tempo passou, e, após nove meses de namoro, decidiram dar um passo adiante e noivar. Samuel, com seu jeito inventivo, planejou o noivado de forma que todos soubessem do evento, mas com um toque de mistério: ele decidiu não revelar de imediato quem era a noiva. No final, a surpresa foi revelada, e o noivado se tornou um momento de alegria e comemoração, mesmo com os pequenos imprevistos que surgiram.</p>
+            <p class="font-poppins text-sm lg:text-lg">O tempo passou, e, após nove meses de namoro, decidiram dar um passo adiante e noivar. Samuel, com seu jeito inventivo, planejou o noivado de forma que todos soubessem do evento, mas com um toque de mistério: ele decidiu não revelar de imediato quem era a noiva. No final, a surpresa foi revelada, e o noivado se tornou um momento de alegria e comemoração, mesmo com os pequenos imprevistos que surgiram.</p>
             <br>
-            <p class="font-poppins text-sm xl:text-md">Claro, nem tudo foi fácil. O caminho até aqui teve suas dificuldades, provações e momentos de incerteza – o tipo de experiência que testa a força de qualquer casal. Mas cada obstáculo se transformou em aprendizado, e com cada vitória, eles se preparavam para o maior desafio de todos: construir uma vida juntos, como uma só unidade. E hoje, ao olhar para o passado, cada batalha se torna uma prova do amor inabalável que os une. Cada conquista é uma lembrança do quão longe chegaram.</p>
+            <p class="font-poppins text-sm lg:text-lg lg:my-2">Claro, nem tudo foi fácil. O caminho até aqui teve suas dificuldades, provações e momentos de incerteza – o tipo de experiência que testa a força de qualquer casal. Mas cada obstáculo se transformou em aprendizado, e com cada vitória, eles se preparavam para o maior desafio de todos: construir uma vida juntos, como uma só unidade. E hoje, ao olhar para o passado, cada batalha se torna uma prova do amor inabalável que os une. Cada conquista é uma lembrança do quão longe chegaram.</p>
         </div>
 
         <div class="text-white">
@@ -264,18 +264,18 @@
             </div>
         </div>
 
-        <div id="gallery-2" class="hidden lg:grid grid-cols-2 gap-4 my-8 w-4/5 m-auto   ">
+        <div id="gallery-2" class="hidden lg:grid grid-cols-2 gap-4 my-12 w-3/5 m-auto">
             <div class="text-white relative m-auto">
                 <img src="assets/c61fd361.jpg" alt="noivos sorrindo" class="w-full h-auto">
                 <div class="relative bottom-0 w-full bg-black bg-opacity-30 text-white p-4 flex items-center">
                     <p class="font-poppins text-sm m-auto">O primeiro rodízio de pizza juntos a gente nunca esquece.</p>
                 </div>
             </div>
-            <div id="gallery-2" class="hidden lg:grid grid-cols-1 gap-4 w-3/4 mx-auto">
+            <div class="grid grid-cols-1 gap-4 w-3/4 mx-auto">
                 <img class="w-full h-full bg-cover bg-center" src="./assets/6c6dcfb6d8410.jpg">
                 <img class="w-full h-full bg-cover bg-center" src="./assets/ecf3f7d242e.jpg">
             </div>
-            <div id="gallery-2" class="hidden lg:grid grid-cols-1 gap-4 w-3/4 mx-auto">
+            <div class="grid grid-cols-1 gap-4 w-3/4 mx-auto">
                 <img class="w-full h-full bg-cover bg-center" src="./assets/eb7ae57d.jpg">
                 <img class="w-full h-full bg-cover bg-center" src="./assets/3dac1f02f4.jpg">
             </div>
