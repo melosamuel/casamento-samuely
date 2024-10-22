@@ -4,7 +4,7 @@
     <meta property="og:title" content="Casamento Samuel e Jardielly" />
     <meta property="og:description" content="Acompanhe os detalhes do nosso casamento!" />
     <meta property="og:url" content="https://melosamuel.github.io/casamento-samuely" />
-    <meta property="og:image" content="https://melosamuel.github.io/casamento-samuely/assets/603bb3b46ae.jpg" />
+    <meta property="og:image" content="https://melosamuel.github.io/casamento-samuely/assets/603bb3b46ae.webp" />
     <meta property="og:type" content="website" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +13,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">      
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Meow+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@heroicons/vue@v2"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Defina a data do evento (exemplo: 26 de Janeiro de 2025)
@@ -115,6 +114,27 @@
             </ul>
         </nav>
     </header>
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" style="z-index: 1;">
+        <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative">
+            <!-- Botão para fechar o popup -->
+            <button id="closePopup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <!-- Conteúdo do popup -->
+            <h2 class="text-2xl font-bold mb-4 text-center">Confirme sua presença!</h2>
+            <p class="text-center mb-6">Estamos ansiosos para receber sua confirmação. Não se esqueça de confirmar a sua presença!</p>
+    
+            <!-- Botão para visitar o link -->
+            <div class="text-center">
+                <a id="linkClosePopup" href="https://noivos.casar.com/samuely#/rsvp" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" target="_blank">
+                    Confirmar Presença
+                </a>
+            </div>
+        </div>
+    </div>
     <main class="px-4 flex-grow py-8 lg:px-24  xl:px-12">
         <menu id="side-menu" class="fixed top-0 right-[-250px] w-2/3 h-screen bg-slate-500 px-4 py-2 sm:right-[-600px] sm:w-2/4 hidden" style="transition: right 0.3s ease; z-index: 1; box-shadow: -20px 0 5px rgba(0, 0, 0, 0.5);">
             <div class="flex justify-end" id="close-menu">
@@ -183,7 +203,7 @@
 
         <div class="lg:hidden">
             <div class="text-white relative my-12 sm:w-2/4 sm:mx-auto">
-                <img src="assets/603bb3b46ae.jpg" alt="noivos sorrindo" class="w-full h-auto">
+                <img src="assets/603bb3b46ae.webp" alt="noivos sorrindo" class="w-full h-auto">
                 <div class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 flex items-center h-1/4">
                     <p class="font-poppins text-sm m-auto">Veja um pouco da nossa história!</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6">
@@ -211,7 +231,7 @@
 
         <div class="hidden lg:flex lg:justify-between xl:mt-12">
             <div class="text-white relative my-12 sm:w-2/4 sm:mx-auto lg:w-2/5 lg:mx-0 lg:h-max xl:w-3/12 xl:mx-auto">
-                <img src="assets/603bb3b46ae.jpg" alt="noivos sorrindo" class="w-full h-auto lg:px-6">
+                <img src="assets/603bb3b46ae.webp" alt="noivos sorrindo" class="w-full h-auto lg:px-6">
                 <div class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 flex items-center h-1/4 lg:hidden">
                     <p class="font-poppins text-sm m-auto">Veja um pouco da nossa história!</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6">
@@ -248,21 +268,21 @@
 
         <div id="gallery-1" class="lg:hidden">
             <div class="text-white relative my-12 sm:w-2/4 sm:mx-auto lg:w-2/5">
-                <img src="assets/c61fd361.jpg" alt="noivos sorrindo" class="w-full h-auto">
+                <img src="assets/c61fd361.webp" alt="noivos sorrindo" class="w-full h-auto">
                 <div class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 flex items-center h-1/4">
                     <p class="font-poppins text-sm m-auto">O primeiro rodízio de pizza juntos a gente nunca esquece.</p>
                 </div>
             </div>
 
             <div class="grid gap-4 grid-cols-2">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/6c6dcfb6d8410.jpg">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/ecf3f7d242e.jpg">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/eb7ae57d.jpg">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/3dac1f02f4.jpg">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/6c6dcfb6d8410.webp">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/ecf3f7d242e.webp">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/eb7ae57d.webp">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/3dac1f02f4.webp">
             </div>
 
             <div class="text-white relative my-12 sm:w-2/4 sm:mx-auto lg:w-2/6">
-                <img src="assets/a35e77f4bff1.jpg" alt="noivos sorrindo" class="w-full h-auto">
+                <img src="assets/a35e77f4bff1.webp" alt="noivos sorrindo" class="w-full h-auto">
                 <div class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white">
                     <p class="font-poppins text-sm m-auto py-4 px-2">03 de Dezembro de 2022</p>
                 </div>
@@ -271,21 +291,21 @@
 
         <div id="gallery-2" class="hidden lg:grid grid-cols-2 gap-4 my-12 w-3/5 m-auto">
             <div class="text-white relative m-auto">
-                <img src="assets/c61fd361.jpg" alt="noivos sorrindo" class="w-full h-auto">
+                <img src="assets/c61fd361.webp" alt="noivos sorrindo" class="w-full h-auto">
                 <div class="relative bottom-0 w-full bg-black bg-opacity-30 text-white p-4 flex items-center">
                     <p class="font-poppins text-sm m-auto">O primeiro rodízio de pizza juntos a gente nunca esquece.</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 gap-4 w-3/4 mx-auto">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/6c6dcfb6d8410.jpg">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/ecf3f7d242e.jpg">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/6c6dcfb6d8410.webp">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/ecf3f7d242e.webp">
             </div>
             <div class="grid grid-cols-1 gap-4 w-3/4 mx-auto">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/eb7ae57d.jpg">
-                <img class="w-full h-full bg-cover bg-center" src="./assets/3dac1f02f4.jpg">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/eb7ae57d.webp">
+                <img class="w-full h-full bg-cover bg-center" src="./assets/3dac1f02f4.webp">
             </div>
             <div class="text-white m-auto w-3/4">
-                <img src="assets/a35e77f4bff1.jpg" alt="noivos sorrindo" class="w-full h-auto">
+                <img src="assets/a35e77f4bff1.webp" alt="noivos sorrindo" class="w-full h-auto">
                 <div class="relative bottom-0 w-full bg-black bg-opacity-30 text-white">
                     <p class="font-poppins text-sm m-auto py-4 px-2">03 de Dezembro de 2022</p>
                 </div>
@@ -311,7 +331,7 @@
             </div>
             <br>
             <div class="text-white relative my-12 sm:w-2/4 sm:mx-auto lg:w-2/5">
-                <img src="assets/e420eb81.jpg" alt="noivos sorrindo" class="w-full h-auto">
+                <img src="assets/e420eb81.webp" alt="noivos sorrindo" class="w-full h-auto">
                 <div class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white">
                     <p class="font-poppins text-sm m-auto py-4 px-2">A melhor instrutora!</p>
                 </div>
@@ -330,31 +350,31 @@
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:w-3/4 sm:mx-auto xl:gap-8">
             <div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden sm:rounded-none">
-                    <img src="assets/9f2b9ba.jpg"  class="w-full h-full object-cover" id="j-e-g">
+                    <img src="assets/9f2b9ba.webp"  class="w-full h-full object-cover" id="j-e-g">
                 </div>
                 <label for="j-e-g" class="text-white text-sm font-poppins">Júnior & Grazielle</label>
             </div>
             <div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden sm:rounded-none">
-                    <img src="assets/a693b419e7.jpg"  class="w-full h-full object-cover" id="s-e-g">
+                    <img src="assets/a693b419e7.webp"  class="w-full h-full object-cover" id="s-e-g">
                 </div>
                 <label for="s-e-g" class="text-white text-sm font-poppins">Samuel & Grazyelle</label>
             </div>
             <div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden sm:rounded-none">
-                    <img src="assets/ae18215f.jpg"  class="w-full h-full object-cover" id="d-e-j">
+                    <img src="assets/ae18215f.webp"  class="w-full h-full object-cover" id="d-e-j">
                 </div>
                 <label for="d-e-j" class="text-white text-sm font-poppins">Drielly & Jardielson</label>
             </div>
             <div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden sm:rounded-none">
-                    <img src="assets/9142a701e74498b.jpg"  class="w-full h-full object-cover" id="r-e-a">
+                    <img src="assets/9142a701e74498b.webp"  class="w-full h-full object-cover" id="r-e-a">
                 </div>
                 <label for="r-e-a" class="text-white text-sm font-poppins">Ricardo & Ariane</label>
             </div>
             <!--<div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden">
-                    <img src="assets/robson-raquel.jpg"  class="w-full h-full object-cover" id="r-r">
+                    <img src="assets/robson-raquel.webp"  class="w-full h-full object-cover" id="r-r">
                 </div>
                 <label for="r-r" class="text-white text-sm font-poppins">Robson & Raquel</label>
             </div>-->
@@ -369,25 +389,25 @@
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:w-3/4 sm:mx-auto xl:gap-8">
             <div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden sm:rounded-none">
-                    <img src="assets/55793be7b.jpg" class="w-full h-full object-cover" id="daminha">
+                    <img src="assets/55793be7b.webp" class="w-full h-full object-cover" id="daminha">
                 </div>
                 <label for="daminha" class="text-white text-sm font-poppins">Aylla</label>
             </div>
             <div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden sm:rounded-none">
-                    <img src="assets/8efd56fd8.jpg" class="w-full h-full object-cover" id="pajem">
+                    <img src="assets/8efd56fd8.webp" class="w-full h-full object-cover" id="pajem">
                 </div>
                 <label for="pajem" class="text-white text-sm font-poppins">Joalison</label>
             </div>
             <div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden sm:rounded-none">
-                    <img src="assets/74953b45d.jpg" class="w-full h-full object-cover" id="daminha2">
+                    <img src="assets/74953b45d.webp" class="w-full h-full object-cover" id="daminha2">
                 </div>
                 <label for="daminha2" class="text-white text-sm font-poppins">Kemilly</label>
             </div>
             <!--<div class="text-center">
                 <div class="w-full h-3/4 bg-yellow-200 rounded-full overflow-hidden">
-                    <img src="assets/raissa.jpg"  class="w-full h-full object-cover" id="raissa">
+                    <img src="assets/raissa.webp"  class="w-full h-full object-cover" id="raissa">
                 </div>
                 <label for="raissa" class="text-white text-sm font-poppins">Raissa</label>
             </div>-->
@@ -409,6 +429,14 @@
             sideMenu.classList.remove('open');
             sideMenu.classList.toggle('hidden');
         })
+    </script>
+    <script>
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('popup').classList.add('hidden');
+        });
+        document.getElementById('linkClosePopup').addEventListener('click', function() {
+            document.getElementById('popup').classList.add('hidden');
+        });
     </script>
 </body>
 </html>
