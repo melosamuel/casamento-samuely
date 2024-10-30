@@ -42,80 +42,54 @@
             setInterval(updateClock, 1000 * 60 * 60 * 24);
         });
     </script>
-    <style>
-        menu.open{
-            right: 0;
-        }
-    </style>
 </head>
-<body class="h-full flex flex-col bg-zinc-800 w-full lg:px-12">
+<body class="h-full w-full mb-8 flex flex-col bg-zinc-800 lg:w-[90%] mx-auto">
     <header class="flex flex-col pb-0 p-4 items-center w-full">
         <p class="text-2xl font-meow text-white self-start sm:text-4xl lg:self-center xl:text-6xl">J&S</p>
         <div class="text-center lg:hidden">
             <p id="day-clock" class="text-lg font-libre text-white"></p>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" style="background-color: slategray">
             <ul class="site-nav-list">
                 <li class="site-nav-item">
                     <a href="index.html" class="site-nav-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6 xl:size-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-7 m-auto">
                             <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
                             <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
                         </svg>
-                        <span class="site-nav-text">Início</span>
+                        <span class="site-nav-text" style="color: white">Início</span>
                     </a>
                 </li>
                 <li class="site-nav-item">
                     <a href="pages/regras.html" class="site-nav-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6 xl:size-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-7 m-auto">
                             <path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clip-rule="evenodd" />
                             <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 0 1-3 0V6.75Z" />
                         </svg>                                                                                       
-                        <span class="site-nav-text">Regras</span>
+                        <span class="site-nav-text" style="color: white">Regras</span>
                     </a>
-                </li>
-                <li class="site-nav-item">   
-                    <a href="https://noivos.casar.com/samuely#/rsvp" class="site-nav-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6 xl:size-8" id="presenca">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                        <span class="site-nav-text">RSVP</span>
-                    </a>
-                </li>
+                </li>                                                                        
                 <li class="site-nav-item">
                     <a href="https://noivos.casar.com/samuely#/presentes" class="site-nav-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6 xl:size-8" id="presentear">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-7 m-auto" id="presentear">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
                         </svg>
-                        <span class="site-nav-text">Presentes</span>
+                        <span class="site-nav-text" style="color: white">Presentes</span>
                     </a>
                 </li>
                 <li class="site-nav-item">
                     <a href="pages/cerimonia.html" class="site-nav-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6 xl:size-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-7 m-auto">
                             <path d="m15 1.784-.796.795a1.125 1.125 0 1 0 1.591 0L15 1.784ZM12 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L12 1.784ZM9 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L9 1.784ZM9.75 7.547c.498-.021.998-.035 1.5-.042V6.75a.75.75 0 0 1 1.5 0v.755c.502.007 1.002.021 1.5.042V6.75a.75.75 0 0 1 1.5 0v.88l.307.022c1.55.117 2.693 1.427 2.693 2.946v1.018a62.182 62.182 0 0 0-13.5 0v-1.018c0-1.519 1.143-2.829 2.693-2.946l.307-.022v-.88a.75.75 0 0 1 1.5 0v.797ZM12 12.75c-2.472 0-4.9.184-7.274.54-1.454.217-2.476 1.482-2.476 2.916v.384a4.104 4.104 0 0 1 2.585.364 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 2.585-.364v-.384c0-1.434-1.022-2.7-2.476-2.917A49.138 49.138 0 0 0 12 12.75ZM21.75 18.131a2.604 2.604 0 0 0-1.915.165 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.604 2.604 0 0 0-1.915-.165v2.494c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875v-2.494Z" />
                         </svg>                              
-                        <span class="site-nav-text">Cerimônia</span>
-                    </a>
-                </li>
-                <li class="site-nav-item">
-                    <a href="pages/festa.html" class="site-nav-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6 xl:size-8">
-                            <path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z" clip-rule="evenodd" />
-                        </svg>                                                           
-                        <span class="site-nav-text">Festa</span>
+                        <span class="site-nav-text" style="color: white">Cerimônia/Festa</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <div id="menu-btn" class="botao-menu" style="z-index: 1;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" class="size-8">
-            <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-        </svg>              
-    </div>
-    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-full" style="z-index: 1;">
-        <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative">
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 w-full lg:text-3xl" style="z-index: 1;">
+        <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-xl p-6 relative">
             <!-- Botão para fechar o popup -->
             <button id="closePopup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -124,79 +98,68 @@
             </button>
             
             <!-- Conteúdo do popup -->
-            <h2 class="text-2xl font-bold mb-4 text-center">Confirme sua presença!</h2>
-            <p class="text-center mb-6">Estamos ansiosos para receber sua confirmação. Não se esqueça de confirmar a sua presença!</p>
+            <h2 class="text-2xl font-bold mb-4 text-center lg:mb-6">Confirme sua presença!</h2>
+            <p class="text-center mb-6 lg:mb-12">Estamos ansiosos para receber sua confirmação. Não se esqueça de confirmar a sua presença!</p>
     
             <!-- Botão para visitar o link -->
             <div class="text-center">
-                <a id="linkClosePopup" href="https://noivos.casar.com/samuely#/rsvp" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" target="_blank">
+                <a id="linkClosePopup" href="https://noivos.casar.com/samuely#/rsvp" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 lg:rounded-lg" target="_blank">
                     Confirmar Presença
                 </a>
             </div>
     </div>
     </div>
-    <main class="px-4 flex-grow py-8 lg:px-24  xl:px-12">
-        <menu id="side-menu" class="fixed top-0 right-[-250px] w-2/3 h-screen bg-slate-500 px-4 py-2 sm:right-[-600px] sm:w-2/4 hidden" style="transition: right 0.3s ease; z-index: 1; box-shadow: -20px 0 5px rgba(0, 0, 0, 0.5);">
-            <div class="flex justify-end" id="close-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-9 sm:size-10">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>                                  
-            </div>
+    <main class="px-4 flex-grow py-8 w-full lg:px-24 xl:px-12">
+        <menu id="side-menu" class="fixed bottom-0 left-0 w-full h-fit bg-white px-4 py-4 rounded-t-2xl lg:hidden" style="z-index: 1;">
             <nav class="px-1">
-                <ul>
-                    <li class="my-8">
+                <ul class="flex justify-between">
+                    <li class="site-nav-item selected">
                         <a href="index.html" class="site-nav-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 m-auto">
                                 <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
                                 <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
                             </svg>
-                            <span class="text-white mx-2 text-lg font-poppins">Início</span>
+                            <span class="site-nav-text">Início</span>
                         </a>
                     </li>
-                    <li class="my-8">
+                    <li class="site-nav-item">
                         <a href="pages/regras.html" class="site-nav-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 m-auto">
                                 <path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clip-rule="evenodd" />
                                 <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 0 1-3 0V6.75Z" />
                             </svg>                                                                                       
-                            <span class="text-white mx-2 text-lg font-poppins">Regras</span>
+                            <span class="site-nav-text">Regras</span>
                         </a>
                     </li>
-                    <li class="my-8">   
-                        <a href="https://noivos.casar.com/samuely#/rsvp" class="site-nav-link" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6" id="presenca">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
-                            <span class="text-white mx-2 text-sm font-poppins">Confirmar Presença</span>
-                        </a>
-                    </li>
-                    <li class="my-8">
+                    <li class="site-nav-item">
                         <a href="https://noivos.casar.com/samuely#/presentes" class="site-nav-link" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6" id="presentear">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
-                            </svg>
-                            <span class="text-white mx-2 text-lg font-poppins">Presentes</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 m-auto">
+                                <path d="M9.375 3a1.875 1.875 0 0 0 0 3.75h1.875v4.5H3.375A1.875 1.875 0 0 1 1.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0 1 12 2.753a3.375 3.375 0 0 1 5.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 1 0-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3ZM11.25 12.75H3v6.75a2.25 2.25 0 0 0 2.25 2.25h6v-9ZM12.75 12.75v9h6.75a2.25 2.25 0 0 0 2.25-2.25v-6.75h-9Z" />
+                            </svg>                              
+                            <span class="site-nav-text">Presentes</span>
                         </a>
                     </li>
-                    <li class="my-8">
+                    <li class="site-nav-item">
                         <a href="pages/cerimonia.html" class="site-nav-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 m-auto">
                                 <path d="m15 1.784-.796.795a1.125 1.125 0 1 0 1.591 0L15 1.784ZM12 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L12 1.784ZM9 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L9 1.784ZM9.75 7.547c.498-.021.998-.035 1.5-.042V6.75a.75.75 0 0 1 1.5 0v.755c.502.007 1.002.021 1.5.042V6.75a.75.75 0 0 1 1.5 0v.88l.307.022c1.55.117 2.693 1.427 2.693 2.946v1.018a62.182 62.182 0 0 0-13.5 0v-1.018c0-1.519 1.143-2.829 2.693-2.946l.307-.022v-.88a.75.75 0 0 1 1.5 0v.797ZM12 12.75c-2.472 0-4.9.184-7.274.54-1.454.217-2.476 1.482-2.476 2.916v.384a4.104 4.104 0 0 1 2.585.364 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 2.585-.364v-.384c0-1.434-1.022-2.7-2.476-2.917A49.138 49.138 0 0 0 12 12.75ZM21.75 18.131a2.604 2.604 0 0 0-1.915.165 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.604 2.604 0 0 0-1.915-.165v2.494c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875v-2.494Z" />
                             </svg>                              
-                            <span class="text-white mx-2 text-lg font-poppins">Cerimônia</span>
-                        </a>
-                    </li>
-                    <li class="my-8">
-                        <a href="pages/festa.html" class="site-nav-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
-                                <path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z" clip-rule="evenodd" />
-                            </svg>                                                           
-                            <span class="text-white mx-2 text-lg font-poppins">Festa</span>
+                            <span class="site-nav-text">Festa</span>
                         </a>
                     </li>
                 </ul>
             </nav>
         </menu>
+        <div id="image-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 hidden" style="z-index: 1;">
+            <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative">
+              <button id="close-modal" class="absolute -top-4 -right-4 bg-red-500 rounded-full text-white hover:text-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <img id="modal-image" src="" alt="Imagem grande" class="rounded" />
+            </div>
+        </div>
         <div id="wedding-details" class="my-4 lg:hidden">
             <p class="text-4xl text-center my-4 font-imperial text-white">26 de Janeiro às 15h</p>
         </div>
@@ -206,8 +169,9 @@
         <audio id="audio-mae" src="assets/audio-mae.mp3"></audio>
         <audio id="audio-pai" src="assets/audio-pai.mp3"></audio>
         <audio id="audio-padrinhos" src="assets/padrinhos.mp3"></audio>
+        <audio id="audio-cooperadores" src="assets/cooperadores.mp3"></audio>
 
-        <div class="audio-button" onclick="toggleAudio('audio', this, '02:50')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: #25D366;">
+        <div class="audio-button" onclick="toggleAudio('audio', this, '02:50')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: rgb(59, 130, 246);">
             <div class="audio-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
                     <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
@@ -246,29 +210,23 @@
         </div>
 
         <div class="hidden lg:inline-block w-full xl:mt-12">
-            <div class="text-white xl:mt-12">
-                <h2 class="font-libre w-ful m-auto text-center text-2xl my-4">A <span class="ml-2">HISTÓRIA DO CASAL</span></h2>
+            <div class="text-white font-poppins text-sm xl:mt-12 lg:px-8 lg:text-xl">
+                <h2 class="font-libre w-ful m-auto text-center text-3xl my-4">A <span class="ml-2">HISTÓRIA DO CASAL</span></h2>
                 <div class="text-white relative h-full my-auto sm:w-2/4 sm:mx-auto xl:w-3/12 xl:mx-auto">
                     <img src="assets/603bb3b46ae.webp" alt="noivos sorrindo" class="w-full h-full px-2">
-                    <div class="legend-container">
-                        <p class="font-poppins text-sm m-auto">Veja um pouco da nossa história!</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6">
-                            <path fill-rule="evenodd" d="M10 3a.75.75 0 0 1 .75.75v10.638l3.96-4.158a.75.75 0 1 1 1.08 1.04l-5.25 5.5a.75.75 0 0 1-1.08 0l-5.25-5.5a.75.75 0 1 1 1.08-1.04l3.96 4.158V3.75A.75.75 0 0 1 10 3Z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
                 </div>
                 <br>
-                <p class="font-poppins text-sm">Era janeiro de 2022, e dois destinos estavam prestes a se cruzar sem que eles soubessem o impacto que causariam na vida um do outro. A cunhada de Jardielly, agindo como um cupido, sugeriu a Samuel que convidasse Jardielly para um encontro e, embora nenhum dos dois soubesse naquele momento, algo muito especial estava prestes a nascer.</p>
+                Era janeiro de 2022, e dois destinos estavam prestes a se cruzar sem que eles soubessem o impacto que causariam na vida um do outro. A cunhada de Jardielly, agindo como um cupido, sugeriu a Samuel que convidasse Jardielly para um encontro e, embora nenhum dos dois soubesse naquele momento, algo muito especial estava prestes a nascer.</p>
                 <br>
-                <p class="font-poppins text-sm">O primeiro encontro foi repleto de sorrisos e conversas que fluiram naturalmente entre eles, passando por assuntos do cotidiano, dúvidas sobre a vida e até planos para o futuro. Não houve aquela sensação mágica de familiaridade imediata, mas havia algo especial na forma como eles compartilhavam suas ideias e metas. Aos poucos, encontros se tornaram rotinas, e a presença um do outro passou de agradável a indispensável. O que começou como curiosidade, logo se transformou em uma afeição profunda.</p>
+                O primeiro encontro foi repleto de sorrisos e conversas que fluiram naturalmente entre eles, passando por assuntos do cotidiano, dúvidas sobre a vida e até planos para o futuro. Não houve aquela sensação mágica de familiaridade imediata, mas havia algo especial na forma como eles compartilhavam suas ideias e metas. Aos poucos, encontros se tornaram rotinas, e a presença um do outro passou de agradável a indispensável. O que começou como curiosidade, logo se transformou em uma afeição profunda.</p>
                 <br>
-                <p class="font-poppins text-sm">Pouco tempo depois, Samuel recebeu a notícia de que iria ingressar na carreira militar. Um passo importante, mas que trazia suas dificuldades. Ele teve que raspar o cabelo, abraçando uma nova fase em sua vida. Porém, nem isso abalou Jardielly, que, firme ao seu lado, mostrava que o amor deles era resistente, mesmo nas adversidades – como o cabelo raspado que virou uma piada entre os dois. Cada desafio e evento tornava o vínculo mais forte.</p>
+                Pouco tempo depois, Samuel recebeu a notícia de que iria ingressar na carreira militar. Um passo importante, mas que trazia suas dificuldades. Ele teve que raspar o cabelo, abraçando uma nova fase em sua vida. Porém, nem isso abalou Jardielly, que, firme ao seu lado, mostrava que o amor deles era resistente, mesmo nas adversidades – como o cabelo raspado que virou uma piada entre os dois. Cada desafio e evento tornava o vínculo mais forte.</p>
                 <br>
-                <p class="font-poppins text-sm">Enquanto Samuel estava no internato, Jardielly tomou uma decisão importante em sua vida espiritual: ela se batizou na Congregação de Carius. Samuel ficou imensamente feliz com a notícia, entendendo que esse era um passo significativo para ela em sua caminhada com Deus. O batismo foi um marco importante na vida dela, e mesmo distantes, o apoio mútuo entre eles continuava forte.</p>
+                Enquanto Samuel estava no internato, Jardielly tomou uma decisão importante em sua vida espiritual: ela se batizou na Congregação de Carius. Samuel ficou imensamente feliz com a notícia, entendendo que esse era um passo significativo para ela em sua caminhada com Deus. O batismo foi um marco importante na vida dela, e mesmo distantes, o apoio mútuo entre eles continuava forte.</p>
                 <br> 
-                <p class="font-poppins text-sm">O tempo passou, e, após nove meses de namoro, decidiram dar um passo adiante e noivar. Samuel, com seu jeito inventivo, planejou o noivado de forma que todos soubessem do evento, mas com um toque de mistério: ele decidiu não revelar de imediato quem era a noiva. No final, a surpresa foi revelada, e o noivado se tornou um momento de alegria e comemoração, mesmo com os pequenos imprevistos que surgiram.</p>
+                O tempo passou, e, após nove meses de namoro, decidiram dar um passo adiante e noivar. Samuel, com seu jeito inventivo, planejou o noivado de forma que todos soubessem do evento, mas com um toque de mistério: ele decidiu não revelar de imediato quem era a noiva. No final, a surpresa foi revelada, e o noivado se tornou um momento de alegria e comemoração, mesmo com os pequenos imprevistos que surgiram.</p>
                 <br>
-                <p class="font-poppins text-sm">Claro, nem tudo foi fácil. O caminho até aqui teve suas dificuldades, provações e momentos de incerteza – o tipo de experiência que testa a força de qualquer casal. Mas cada obstáculo se transformou em aprendizado, e com cada vitória, eles se preparavam para o maior desafio de todos: construir uma vida juntos, como uma só unidade. E hoje, ao olhar para o passado, cada batalha se torna uma prova do amor inabalável que os une. Cada conquista é uma lembrança do quão longe chegaram.</p>
+                Claro, nem tudo foi fácil. O caminho até aqui teve suas dificuldades, provações e momentos de incerteza – o tipo de experiência que testa a força de qualquer casal. Mas cada obstáculo se transformou em aprendizado, e com cada vitória, eles se preparavam para o maior desafio de todos: construir uma vida juntos, como uma só unidade. E hoje, ao olhar para o passado, cada batalha se torna uma prova do amor inabalável que os une. Cada conquista é uma lembrança do quão longe chegaram.</p>
             </div>
         </div>
 
@@ -347,7 +305,7 @@
         </div>
 
         <hr>
-        <div class="audio-button" onclick="toggleAudio('audio-marta', this, '00:59')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: #25D366;">
+        <div class="audio-button" onclick="toggleAudio('audio-marta', this, '00:59')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: rgb(59, 130, 246);">
             <div class="audio-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
                     <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
@@ -381,7 +339,7 @@
             </div>
         </div>
         <hr>
-        <div class="audio-button" onclick="toggleAudio('audio-mae', this, '00:39')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: #25D366;">
+        <div class="audio-button" onclick="toggleAudio('audio-mae', this, '00:39')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: rgb(59, 130, 246);">
             <div class="audio-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
                     <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
@@ -393,7 +351,7 @@
         <br>
         <div class="agradecimento-container">
             <div class="agradecimento-texto">
-                <h2 class="agradecimento-titulo">Mãe</h2>
+                <h2 class="agradecimento-titulo">Mãe,</h2>
                 <br>
                 <p class="agradecimento-detalhe">Não há distância capaz de diminuir o amor e a gratidão que sinto por você. Mesmo longe, você continua sendo minha base, meu porto seguro e minha maior inspiração.
                     Seu carinho e sua força chegam até mim como um abraço invisível, que me sustenta nos momentos difíceis e alegra os dias bons. Agradeço por cada conselho, cada palavra de apoio e por todo amor incondicional que nunca falha, mesmo à distância. Você é meu exemplo de vida, e levo você comigo em cada passo que dou. Te amo além de qualquer medida, e sou eternamente grata por ser sua filha. 💜.
@@ -409,7 +367,7 @@
             </div>
         </div>
         <hr>
-        <div class="audio-button" onclick="toggleAudio('audio-pai', this, '00:29')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: #25D366;">
+        <div class="audio-button" onclick="toggleAudio('audio-pai', this, '00:29')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: rgb(59, 130, 246);">
             <div class="audio-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
                     <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
@@ -438,13 +396,39 @@
             </div>
         </div>
         <hr>
+        <div class="audio-button" onclick="toggleAudio('audio-cooperadores', this, '00:38')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: rgb(59, 130, 246);">
+            <div class="audio-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                    <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <span class="audio-text">Tocar Áudio</span>
+            <span class="audio-time">00:38</span>
+        </div>
+        <br>
+        <div class="agradecimento-container">
+            <div class="agradecimento-texto">
+                <h2 class="agradecimento-titulo">Ricardo & Ariane,</h2>
+                <br>
+                <p class="agradecimento-detalhe">Não poderíamos deixar de fora aqueles que acompanharam nossa trajetória desde cedo. <br><br>Como encarregado, Ricardo (ou Abraão rs) inspirou e ajudou os noivos como músicos. Proporcionou momentos de reflexão que até hoje são lembrados. E agora como cooperador de jovens e menores, junto da sua esposa, esclarecem, auxiliam e instigam a espiritualidade dos jovens. Sem vocês, nosso caminho seria imcompleto. <br><br>(Talvez... até mesmo... duvidoso e cheio de obstáculos dos quais não conseguiríamos ultrapassar sem os seus conselhos.) <br><br><span class="font-imperial text-3xl">Deus abençoe!</span>
+                <br>
+                </p>
+            </div>
+            <br>
+            <div class="agradecimento-foto-container">
+                <img src="assets/c48af8c9-ccbe-476a-8810-aa6d0625921b.webp" class="agradecimento-foto" style="margin-bottom: 3rem;">
+                <div class="agradecimento-foto-descricao-container">
+                    <p class="agradecimento-foto-descricao">Nosso "cooperadores"</p>
+                </div>
+            </div>
+        <hr>
         <div class="decoracao-container">
             <p>╭═────<span class="decoracao-adicional">────</span>═⌘═──<span class="decoracao-adicional">────</span>──═╮</p>
             <p class="decoracao-titulo">Padrinhos</p>
             <p>╰═────<span class="decoracao-adicional">────</span>═⌘═─<span class="decoracao-adicional">────</span>───═╯</p>
         </div>
 
-        <div class="audio-button" onclick="toggleAudio('audio-padrinhos', this, '00:36')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: #25D366;">
+        <div class="audio-button" onclick="toggleAudio('audio-padrinhos', this, '00:36')" style="align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: background-color 0.2s; background-color: rgb(59, 130, 246);">
             <div class="audio-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
                     <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
@@ -460,7 +444,7 @@
         <div class="decoracao-grid">
             <div class="text-center">
                 <div class="decoracao-foto-container">
-                    <img src="assets/9f2b9ba.webp"  class="" id="j-e-g">
+                    <img src="assets/9f2b9ba.webp" class="decoracao-foto" id="j-e-g">
                 </div>
                 <label for="j-e-g" class="decoracao-foto-descricao">Júnior & Grazielle</label>
             </div>
@@ -484,9 +468,9 @@
             </div>
             <div class="text-center sm:col-start-3">
                 <div class="decoracao-foto-container">
-                    <img src="assets/i222a498b701e74.webp"  class="decoracao-foto" id="r-e-a">
+                    <img src="assets/i222a498b701e74.webp"  class="decoracao-foto" style="min-height: 250px;" id="r-e-r">
                 </div>
-                <label for="r-e-a" class="decoracao-foto-descricao">Robson & Raquel</label>
+                <label for="r-e-r" class="decoracao-foto-descricao">Robson & Raquel</label>
             </div>
         </div>
 
@@ -527,6 +511,18 @@
                 </div>
                 <label for="daminha3" class="decoracao-foto-descricao">Sofia</label>
             </div>
+            <div class="text-center">
+                <div class="decoracao-foto-container">
+                    <img src="assets/3e5ce8ea-d7c7-4332-88e8-8f2f4c078411.webp" class="decoracao-foto" id="daminha4">
+                </div>
+                <label for="daminha4" class="decoracao-foto-descricao">Maria</label>
+            </div>
+            <div class="text-center sm:col-start-2">
+                <div class="decoracao-foto-container">
+                    <img src="assets/9d955f8d-fec1-4c27-8b02-e65b7dc573e9.webp" class="decoracao-foto" id="daminha5">
+                </div>
+                <label for="daminha5" class="decoracao-foto-descricao">Adriana</label>
+            </div>
         </div>
     </main>
     <script>
@@ -564,28 +560,37 @@
         };
     </script>
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const sideMenu = document.getElementById('side-menu');
-
-        menuBtn.addEventListener('click', () => {
-            sideMenu.classList.remove('hidden');
-            sideMenu.classList.toggle('open'); // Alterna o menu aberto e fechado
-        });
-    </script>
-    <script>
-        const closeMenuBtn = document.getElementById('close-menu');
-        
-        closeMenuBtn.addEventListener('click', () => {
-            sideMenu.classList.remove('open');
-            sideMenu.classList.toggle('hidden');
-        })
-    </script>
-    <script>
         document.getElementById('closePopup').addEventListener('click', function() {
             document.getElementById('popup').classList.add('hidden');
         });
-        document.getElementById('linkClosePopup').addEventListener('click', function() {
-            document.getElementById('popup').classList.add('hidden');
+    </script>
+    <script>
+        // Seleciona todas as imagens da página
+        const images = document.querySelectorAll("img");
+        const modal = document.getElementById("image-modal");
+        const modalImage = document.getElementById("modal-image");
+        const closeModal = document.getElementById("close-modal");
+
+        // Para cada imagem, adiciona o evento de clique
+        images.forEach(image => {
+            image.addEventListener("click", function() {
+            // Define a fonte da imagem no modal como a da imagem clicada
+            modalImage.src = image.src;
+            // Exibe o modal
+            modal.classList.remove("hidden");
+            });
+        });
+
+        // Fecha o modal ao clicar no botão de fechar
+        closeModal.addEventListener("click", function() {
+            modal.classList.add("hidden");
+        });
+
+        // Fecha o modal ao clicar fora da imagem no modal
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal) {
+            modal.classList.add("hidden");
+            }
         });
     </script>
 </body>
